@@ -1,0 +1,61 @@
+{
+  "models": {
+    "gemma4": {
+      "name": "Gemma 4 (31B Cloud)",
+      "base_url": "https://ollama.com/v1",
+      "model": "gemma4:31b-cloud",
+      "api_keys": [
+        "YOUR_GEMMA4_API_KEY_HERE"
+      ],
+      "provider": "openai",
+      "max_tokens": 32768,
+      "default": true
+    },
+    "qwen3-coder": {
+      "name": "Qwen3 Coder 480B (OpenRouter)",
+      "base_url": "https://openrouter.ai/api/v1",
+      "model": "qwen/qwen3-coder:free",
+      "api_keys": [
+        "YOUR_OPENROUTER_API_KEY_HERE"
+      ],
+      "provider": "openai",
+      "max_tokens": 65536,
+      "fallback": "gemma4",
+      "default": false
+    },
+    "ollama-local": {
+      "name": "Ollama Lokal (localhost)",
+      "base_url": "http://localhost:11434",
+      "model": "llama3",
+      "api_keys": [""],
+      "provider": "ollama",
+      "max_tokens": 8192,
+      "default": false
+    },
+    "gemini-openrouter": {
+      "name": "Gemini 3 Flash Preview (OpenRouter)",
+      "base_url": "https://openrouter.ai/api/v1",
+      "model": "google/gemini-3-flash-preview",
+      "api_keys": [
+        "YOUR_OPENROUTER_API_KEY_HERE"
+      ],
+      "provider": "openai",
+      "max_tokens": 32768,
+      "fallback": "gemma4",
+      "default": false
+    },
+    "gemini-native": {
+      "name": "Gemini 3.5 Flash (Google AI)",
+      "base_url": "https://generativelanguage.googleapis.com/v1beta",
+      "model": "gemini-3.5-flash",
+      "api_keys": [
+        "YOUR_GOOGLE_AI_API_KEY_1",
+        "YOUR_GOOGLE_AI_API_KEY_2"
+      ],
+      "provider": "google",
+      "max_tokens": 65536,
+      "fallback": "gemma4",
+      "default": false
+    }
+  }
+}

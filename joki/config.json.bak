@@ -1,0 +1,79 @@
+{
+  "models": {
+    "gemma4": {
+      "name": "Gemma 4 (31B Cloud)",
+      "base_url": "https://ollama.com/v1",
+      "model": "gemma4:31b-cloud",
+      "api_keys": [
+        "9d0d1e13b42643b28dfb382d69c1ac1d.Gw_hD8Xyp7K-6ONMwi1KvbQB",
+        "0969cb64cd71458e8f5f60eb42393888.EwwYlhaO3qd50_jCS7GP09SG",
+        "ff4b8dc067054e6ea05d7af7b06a7ec0.gcpJIrcMhq4nEiCgxRf1ybN7",
+        "f326d0f1751d47ebb0ad3287d68c0d0f.p2fBkWc77E02_HQ8o_ztw2W5",
+        "72ec6eb765b14ef082cb78af88ce00e9.C0bo1cExP0Z12M3NKIUJTnGa",
+        "f3d2a99cc3ee4fcfa5ca34d96f17d277.BvK56PCM2-Ll9xesV190FEoF"
+      ],
+      "provider": "openai",
+      "max_tokens": 32768,
+      "default": true
+    },
+    "qwen3-coder": {
+      "name": "Qwen3 Coder 480B (OpenRouter)",
+      "base_url": "https://openrouter.ai/api/v1",
+      "model": "qwen/qwen3-coder:free",
+      "api_keys": [
+        "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",
+        "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",
+        "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",
+        "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",
+        "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"
+      ],
+      "provider": "openai",
+      "max_tokens": 65536,
+      "fallback": "gemma4",
+      "default": false
+    },
+    "ollama-local": {
+      "name": "Ollama Lokal (localhost)",
+      "base_url": "http://localhost:11434",
+      "model": "llama3",
+      "api_keys": [""],
+      "provider": "ollama",
+      "max_tokens": 8192,
+      "default": false
+    },
+    "gemini-openrouter": {
+      "name": "Gemini 3 Flash Preview (OpenRouter)",
+      "base_url": "https://openrouter.ai/api/v1",
+      "model": "google/gemini-3-flash-preview",
+      "api_keys": [
+        "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",
+        "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",
+        "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",
+        "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",
+        "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"
+      ],
+      "provider": "openai",
+      "max_tokens": 32768,
+      "fallback": "gemma4",
+      "default": false
+    },
+    "gemini-native": {
+      "name": "Gemini 3.5 Flash (Google AI)",
+      "base_url": "https://generativelanguage.googleapis.com/v1beta",
+      "model": "gemini-3.5-flash",
+      "api_keys": [
+        "AIzaSyD_P3tzsamCZTKS-qoFsnyO4Ssn99Qw-2Y",
+        "AQ.Ab8RN6LXjGsmPcKu4621QxVhplAS0pEKIOr0cTfgEI2qy6KFoA",
+        "AIzaSyDLKTOCeGEhRZWBvGDKbQ6maulEPKhYVvA",
+        "AQ.Ab8RN6J-PkL7s1lWyK2uBj9qFiD4FXyI1vL89ZRBLBrm9XOk4A",
+        "AIzaSyAb10NNDpWdD2d6qkPDQriFLh5fiKfJ9yE",
+        "AQ.Ab8RN6JFqGbCOnNse1K1wN_Cy5g3wr2KVZZpax7X7bKEZhDqeA",
+        "AQ.Ab8RN6LL0cGvf_tQFAugs9s-tlHBxu_TazoKWrswYHZqEjx6iw"
+      ],
+      "provider": "google",
+      "max_tokens": 65536,
+      "fallback": "gemma4",
+      "default": false
+    }
+  }
+}

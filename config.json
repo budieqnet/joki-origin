@@ -1,0 +1,61 @@
+{
+  "brave_api_key": "ISI_API_KEY_BRAVE_MU",
+  "tinyfish_api_key": "sk-tinyfish-44C3niMjMrdkAEaXhSteNdUfz89TRPS8",
+  "tavily_api_key": "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",
+  "models": {
+    "gemma4": {
+      "name": "Gemma 4 (31B Cloud)",
+      "base_url": "https://ollama.com/v1",
+      "model": "gemma4:31b-cloud",
+      "api_keys": [
+        "9d0d1e13b42643b28dfb382d69c1ac1d.Gw_hD8Xyp7K-6ONMwi1KvbQB",
+        "0969cb64cd71458e8f5f60eb42393888.EwwYlhaO3qd50_jCS7GP09SG",
+        "ff4b8dc067054e6ea05d7af7b06a7ec0.gcpJIrcMhq4nEiCgxRf1ybN7",
+        "f326d0f1751d47ebb0ad3287d68c0d0f.p2fBkWc77E02_HQ8o_ztw2W5",
+        "72ec6eb765b14ef082cb78af88ce00e9.C0bo1cExP0Z12M3NKIUJTnGa",
+        "f3d2a99cc3ee4fcfa5ca34d96f17d277.BvK56PCM2-Ll9xesV190FEoF"
+      ],
+      "provider": "openai",
+      "max_tokens": 32768,
+      "default": true
+    },
+    "nusa": {
+      "name": "NUSA LLM (Qwen3.5 122B)",
+      "base_url": "https://ollm.nusa.id/v1",
+      "model": "qwen3.5:122b",
+      "api_keys": [
+        "tmp-nusa-f4107469a8a6ab51007bd8f74f408318"
+      ],
+      "provider": "openai",
+      "api_key_header": "X-Api-Key",
+      "max_tokens": 65536,
+      "fallback": "gemma4",
+      "default": false
+    },
+    "ollama-local": {
+      "name": "Ollama Lokal (localhost)",
+      "base_url": "http://localhost:11434",
+      "model": "llama3",
+      "api_keys": [""],
+      "provider": "ollama",
+      "max_tokens": 8192,
+      "default": false
+    },
+    "gemini-openrouter": {
+      "name": "Gemini 3 Flash Preview (OpenRouter)",
+      "base_url": "https://openrouter.ai/api/v1",
+      "model": "google/gemini-3-flash-preview",
+      "api_keys": [
+        "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",
+        "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",
+        "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",
+        "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",
+        "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"
+      ],
+      "provider": "openai",
+      "max_tokens": 32768,
+      "fallback": "gemma4",
+      "default": false
+    }
+  }
+}
