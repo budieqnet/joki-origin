@@ -1,0 +1,171 @@
+{
+  "theme": "light",
+  "brave_api_key": "ISI_API_KEY_BRAVE_MU",
+  "tinyfish_api_key": "ISI_API_KEY_TINYFISH_MU",
+  "tavily_api_key": "ISI_API_KEY_TAVILY_MU",
+  "models": {
+    "nemotron-3-nano:30b": {
+      "name": "Nemotron 3 Nano (30B, Coding Agent)",
+      "base_url": "https://ollama.com/v1",
+      "model": "nemotron-3-nano:30b",
+      "api_keys": [
+        "ISI_API_KEY_OLLAMA_1",
+        "ISI_API_KEY_OLLAMA_2",
+        "ISI_API_KEY_OLLAMA_3",
+        "ISI_API_KEY_OLLAMA_4",
+        "ISI_API_KEY_OLLAMA_5",
+        "ISI_API_KEY_OLLAMA_6"
+      ],
+      "provider": "openai",
+      "max_tokens": 65536,
+      "fallback": "gemma4",
+      "default": false,
+      "max_iterations": 0,
+      "dry_threshold": 12
+    },
+    "gpt-oss:120b": {
+      "name": "GPT-OSS 120B",
+      "base_url": "https://ollama.com/v1",
+      "model": "gpt-oss:120b",
+      "api_keys": [
+        "ISI_API_KEY_OLLAMA_1",
+        "ISI_API_KEY_OLLAMA_2",
+        "ISI_API_KEY_OLLAMA_3",
+        "ISI_API_KEY_OLLAMA_4",
+        "ISI_API_KEY_OLLAMA_5",
+        "ISI_API_KEY_OLLAMA_6"
+      ],
+      "provider": "openai",
+      "max_tokens": 65536,
+      "fallback": "gemma4",
+      "default": false,
+      "max_iterations": 0,
+      "dry_threshold": 12
+    },
+    "gpt-oss:20b": {
+      "name": "GPT-OSS 20B",
+      "base_url": "https://ollama.com/v1",
+      "model": "gpt-oss:20b",
+      "api_keys": [
+        "ISI_API_KEY_OLLAMA_1",
+        "ISI_API_KEY_OLLAMA_2",
+        "ISI_API_KEY_OLLAMA_3",
+        "ISI_API_KEY_OLLAMA_4",
+        "ISI_API_KEY_OLLAMA_5",
+        "ISI_API_KEY_OLLAMA_6"
+      ],
+      "provider": "openai",
+      "max_tokens": 65536,
+      "fallback": "gemma4",
+      "default": false,
+      "max_iterations": 0,
+      "dry_threshold": 12
+    },
+    "deepseek-v4-flash": {
+      "name": "DeepSeek V4 Flash (Mixture-of-Experts 284B) \u2014 CEPAT & EFISIEN",
+      "base_url": "https://ollama.com/v1",
+      "model": "deepseek-v4-flash:0731-cloud",
+      "api_keys": [
+        "ISI_API_KEY_OLLAMA_1",
+        "ISI_API_KEY_OLLAMA_2",
+        "ISI_API_KEY_OLLAMA_3",
+        "ISI_API_KEY_OLLAMA_4",
+        "ISI_API_KEY_OLLAMA_5",
+        "ISI_API_KEY_OLLAMA_6"
+      ],
+      "provider": "openai",
+      "max_tokens": 65536,
+      "fallback": "gemma4",
+      "default": false,
+      "max_iterations": 0,
+      "dry_threshold": 12
+    },
+    "nemotron-3-ultra": {
+      "name": "NVIDIA Nemotron 3 Ultra (550B, Agentic) \u2014 LONG RUNNING WORKFLOWS",
+      "base_url": "https://ollama.com/v1",
+      "model": "nemotron-3-ultra:cloud",
+      "api_keys": [
+        "ISI_API_KEY_OLLAMA_1",
+        "ISI_API_KEY_OLLAMA_2",
+        "ISI_API_KEY_OLLAMA_3",
+        "ISI_API_KEY_OLLAMA_4",
+        "ISI_API_KEY_OLLAMA_5",
+        "ISI_API_KEY_OLLAMA_6"
+      ],
+      "provider": "openai",
+      "max_tokens": 65536,
+      "fallback": "gemma4",
+      "default": true,
+      "max_iterations": 0,
+      "dry_threshold": 12
+    },
+    "gemma4": {
+      "name": "Gemma 4 (31B Cloud) \u2014 FALLBACK UTAMA",
+      "base_url": "https://ollama.com/v1",
+      "model": "gemma4:31b-cloud",
+      "api_keys": [
+        "ISI_API_KEY_OLLAMA_1",
+        "ISI_API_KEY_OLLAMA_2",
+        "ISI_API_KEY_OLLAMA_3",
+        "ISI_API_KEY_OLLAMA_4",
+        "ISI_API_KEY_OLLAMA_5",
+        "ISI_API_KEY_OLLAMA_6"
+      ],
+      "provider": "openai",
+      "max_tokens": 32768,
+      "default": false,
+      "max_iterations": 0,
+      "dry_threshold": 12
+    },
+    "gemini-openrouter": {
+      "name": "Gemini 3 Flash Preview (OpenRouter)",
+      "base_url": "https://openrouter.ai/api/v1",
+      "model": "google/gemini-3-flash-preview",
+      "api_keys": [
+        "ISI_API_KEY_OPENROUTER_1",
+        "ISI_API_KEY_OPENROUTER_2",
+        "ISI_API_KEY_OPENROUTER_3",
+        "ISI_API_KEY_OPENROUTER_4",
+        "ISI_API_KEY_OPENROUTER_5"
+      ],
+      "provider": "openai",
+      "max_tokens": 32768,
+      "fallback": "gemma4",
+      "default": false,
+      "max_iterations": 0,
+      "dry_threshold": 12
+    },
+    "poolside-laguna-s-2.1": {
+      "name": "Poolside Laguna S 2.1 (Coding Agent)",
+      "base_url": "https://inference.poolside.ai/v1",
+      "model": "poolside/laguna-s-2.1",
+      "api_keys": [
+        "ISI_API_KEY_POOLSIDE_1",
+        "ISI_API_KEY_POOLSIDE_2",
+        "ISI_API_KEY_POOLSIDE_3",
+        "ISI_API_KEY_POOLSIDE_4",
+        "ISI_API_KEY_POOLSIDE_5",
+        "ISI_API_KEY_POOLSIDE_6"
+      ],
+      "provider": "openai",
+      "max_tokens": 32768,
+      "fallback": "gemma4",
+      "default": false,
+      "max_iterations": 0,
+      "dry_threshold": 12
+    },
+    "ollama-local": {
+      "name": "Ollama Lokal (localhost) \u2014 LAST RESORT",
+      "base_url": "http://localhost:11434",
+      "model": "llama3",
+      "api_keys": [
+        ""
+      ],
+      "provider": "ollama",
+      "max_tokens": 8192,
+      "default": false,
+      "max_iterations": 0,
+      "dry_threshold": 12
+    }
+  }
+}
