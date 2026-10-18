@@ -10,16 +10,18 @@ Requirement: **Python 3.10+** (ditest dengan Python 3.12).
 
 ## Fitur Utama
 
-- **75 tools bawaan** — baca/tulis/edit file (dengan undo & backup otomatis), shell commands, query database (MySQL/Postgres/MongoDB/SQLite/MSSQL/Oracle/Redis), web search/fetch/scrape + session login, port scanning, DNS enumeration, CVE search, web vulnerability scan, analisis JS/APK/binary, USB/serial/camera, audio/video transcribe & extract, UI automation (xdotool), git lengkap, linter, test runner, analisis dependency & impact, office files (DOCX/XLSX/PPTX/PDF), LSP code intelligence, todo management, dan memory persisten
+- **75+ tools bawaan** — baca/tulis/edit file (dengan undo & backup otomatis), shell commands, query database (MySQL/Postgres/MongoDB/SQLite/MSSQL/Oracle/Redis), web search/fetch/scrape + session login, port scanning, DNS enumeration, CVE search, web vulnerability scan, analisis JS/APK/binary, USB/serial/camera, audio/video transcribe & extract, UI automation (xdotool), git lengkap, linter, test runner, analisis dependency & impact, office files (DOCX/XLSX/PPTX/PDF), LSP code intelligence, todo management, dan memory persisten
 - **Multi-model** — Nusa LLM (Qwen3 Coder, Qwen3.5, Ornith), Nemotron, GPT-OSS, DeepSeek V4 Flash, Gemma 4, Gemini (via OpenRouter), Ollama lokal; auto rotasi API key & fallback jika quota habis
 - **Mode tugas otomatis** — klasifikasi permintaan ke Coding / Sysadmin / Security / General, dengan set tool yang disesuaikan
 - **Auto-test & fix** — setelah menulis script, langsung di-run dan diperbaiki otomatis jika gagal (hingga 3-5 percobaan)
 - **Context management** — project index, checkpoint tugas, dedup baca file, auto-summarization konteks, deteksi dry-run/stagnasi untuk mencegah loop
 - **TUI & streaming** — interface terminal (Textual) dengan streaming respons + rendering Markdown; header atas menampilkan model aktif + estimasi pemakaian token/konteks (persen dari budget)
 - **LSP pre-inject** — mendeteksi permintaan perbaikan error dan otomatis mengambil diagnostik LSP
-- **Plugin system** — tambah tools kustom di `plugins/` (folder joki)
+- **Plugin system** — tambah tools kustom di `plugins/` (folder joki) atau `~/.local/share/joki/plugins/`
 - **Memory** — memori jangka panjang lintas sesi
 - **Keamanan** — konfirmasi untuk perintah destruktif/ireversibel, deteksi sandbox, sandbox execution, prediksi efek perintah (`predict_command`)
+- **Session management** — auto-save percakapan, checkpoint tugas, todos, dan memori per session; resume dengan riwayat lengkap
+- **Verifier independen** — anti-klaim-palsu (read-only, fail-open; `JOKI_DISABLE_VERIFIER=1` untuk matikan)
 
 ## Instalasi
 
@@ -73,11 +75,7 @@ python -m joki --version                 # versi
 python -m joki --update                  # update dari git
 ```
 
-Percakapan disimpan otomatis tiap giliran ke `sessions/` (folder joki)
-sehingga bisa dilanjutkan kapan pun (termasuk checkpoint tugas, todos, dan
-memori session tersebut). Saat dilanjutkan (`--resume` atau `/resume`),
-riwayat percakapan (user/JOKI, maks 40 pesan terakhir) langsung ditampilkan
-di layar/log.
+Percakapan disimpan otomatis tiap giliran ke `sessions/` (folder joki) sehingga bisa dilanjutkan kapan pun (termasuk checkpoint tugas, todos, dan memori session tersebut). Saat dilanjutkan (`--resume` atau `/resume`), riwayat percakapan (user/JOKI, maks 40 pesan terakhir) langsung ditampilkan di layar/log.
 
 Atau via launcher:
 
@@ -103,12 +101,7 @@ python launcher.py
 
 Batal di tengah tugas: tekan **Esc Esc** (atau Ctrl+C).
 
-Riwayat prompt: di TUI tekan **↑** (prompt sebelumnya) / **↓** (berikutnya),
-ala shell/opencode. Riwayat per sesi — ikut terisi otomatis dari prompt
-sesi yang di-`/resume`/`--resume`. Tombol ↑/↓ tetap aman saat menulis
-prompt multiline (kursor pindah baris dulu) dan saat menu `/` terbuka
-(panah menggeser pilihan menu). Mode non-TUI sudah punya riwayat sendiri
-(panah atas/bawah lewat file `history`).
+Riwayat prompt: di TUI tekan **↑** (prompt sebelumnya) / **↓** (berikutnya), ala shell/opencode. Riwayat per sesi — ikut terisi otomatis dari prompt sesi yang di-`/resume`/`--resume`. Tombol ↑/↓ tetap aman saat menulis prompt multiline (kursor pindah baris dulu) dan saat menu `/` terbuka (panah menggeser pilihan menu). Mode non-TUI sudah punya riwayat sendiri (panah atas/bawah lewat file `history`).
 
 ## Struktur Proyek
 
