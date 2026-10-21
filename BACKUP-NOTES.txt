@@ -1,0 +1,18 @@
+BACKUP NOTES - /root/joki
+Tanggal backup : 2026-10-21 02:xx (UTC)
+Arsip         : joki_20261021-02.zip
+
+Isi arsip: seluruh folder joki/ KECUALI item yang dapat dibuat ulang:
+
+  - joki/venv/            (virtualenv Python 3.12, ~498 MB)
+  - joki/.pytest_cache/   (cache pytest)
+  - semua __pycache__/ dan file *.pyc / *.pyo
+
+Cara restore:
+  1. unzip joki_20261021-02.zip -d /root
+  2. cd /root/joki
+  3. python3 -m venv venv
+  4. ./venv/bin/pip install -r requirements_linux.txt
+
+Catatan: jika butuh backup lengkap termasuk venv, buat arsip tanpa
+pengecualian di atas (ukurannya jauh lebih besar, ~150+ MB).

@@ -1,0 +1,1 @@
+{"root": "/tmp/joki_rncov_yzmxxha3/proj", "scanned_at": 1792580147.093559, "files": {"src/a.py": {"imports": [], "resolved": [], "stamp": [1792580147042106257, 47]}, "tests/test_a.py": {"imports": ["a"], "resolved": [], "stamp": [1792580147042106257, 27]}}, "symbols": {"src/a.py": [{"name": "hitung_total", "line": 1}]}}

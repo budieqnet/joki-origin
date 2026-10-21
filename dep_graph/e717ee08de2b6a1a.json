@@ -1,0 +1,1 @@
+{"root": "/tmp/pytest-of-root/pytest-47/test_rename_importers_from_gra0", "scanned_at": 1792577116.7595441, "files": {"a.py": {"imports": [], "resolved": [], "stamp": [1792577116743275712, 22]}, "b.py": {"imports": ["a"], "resolved": ["a.py"], "stamp": [1792577116743275712, 27]}}, "symbols": {"a.py": [{"name": "f", "line": 1}]}}
