@@ -1,7 +1,7 @@
-from joki.state import *
-import joki.state as _state_mod
 import re
 
+import joki.state as _state_mod
+from joki.state import *
 from joki.tools.database import *
 from joki.tools.deps import *
 from joki.tools.files import *
@@ -11,8 +11,8 @@ from joki.tools.lint import *
 from joki.tools.lsp import handle_lsp_query
 from joki.tools.media import *
 from joki.tools.memory import *
-from joki.tools.question import handle_question
 from joki.tools.office import handle_read_office, handle_write_office
+from joki.tools.question import handle_question
 from joki.tools.reverse_eng import *
 from joki.tools.security import *
 from joki.tools.shell import *
